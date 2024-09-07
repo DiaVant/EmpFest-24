@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1lg5tt4cb10a"]
+
+[ext_resource type="PackedScene" uid="uid://c21vl5rdn3lfw" path="res://spaceship.tscn" id="1_nsu3s"]
+[ext_resource type="PackedScene" uid="uid://dw21ioabyhs08" path="res://fuel_bar.tscn" id="2_egsql"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Spaceship" parent="." instance=ExtResource("1_nsu3s")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FuelBar" parent="CanvasLayer" instance=ExtResource("2_egsql")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 300.0
+offset_bottom = 30.0
+grow_horizontal = 1
+grow_vertical = 1
