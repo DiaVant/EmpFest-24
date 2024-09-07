@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c21vl5rdn3lfw"]
+
+[ext_resource type="Texture2D" uid="uid://ckxgu3viarkar" path="res://icon.svg" id="1_ri8oi"]
+[ext_resource type="Script" path="res://spaceship.gd" id="1_tnmc1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_py205"]
+radius = 16.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6ank"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ri8oi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Spaceship" type="CharacterBody2D"]
+position = Vector2(1250, 500)
+scale = Vector2(2, 2)
+script = ExtResource("1_tnmc1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_py205")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_e6ank")
