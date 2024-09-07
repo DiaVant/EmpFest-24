@@ -13,3 +13,6 @@ config_version=5
 config/name="empfest hackathon 24"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+main_scene="res://Spaceship/spaceship/test.tscn"
+
